@@ -11,6 +11,7 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "roboto", sans-serif;
@@ -21,9 +22,55 @@ ul {
 }
 a {
   text-decoration: none;
+  color: var(--main-text-color);
+}
+h1 {
+  font-size: 3.6rem;
+  color: var(--main-text-color);
+}
+button {
+  background: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid var(--main-text-color);
+  padding: 1rem 3.7rem;
+  outline: none;
+}
+#btt {
+  width: 30px;
+  height: 30px;
+  background: var(--main-text-color);
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  transition: color 0.25s, background 0.25s, border 0.25s ease-in-out;
+}
+#btt i {
+  color: white;
+  transform: rotate(180deg);
+  font-size: 1rem;
 }
 
+#btt:hover {
+  background: white;
+  border: 1px solid var(--main-text-color);
+  transition: color 0.25s, background 0.25s, border 0.25s ease-in-out;
+  cursor: pointer;
+}
+.greyarrow {
+  color: var(--main-text-color) !important;
+}
 /*NAV*/
+.fixed-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
 .nav-bar {
   display: flex;
   width: 100%;
@@ -31,6 +78,7 @@ a {
   justify-content: space-between;
   position: relative;
   align-items: center;
+  background: white;
 }
 
 .logo {
@@ -42,15 +90,16 @@ a {
 .logo h1 {
   font-weight: 400;
   line-height: 2.1rem;
+  font-size: 2.4rem;
   color: var(--main-text-color);
 }
 .logo h1 span {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.8rem;
 }
 .nav-icons {
   display: flex;
-  padding: 3.5rem 3.5rem 3.5rem 0;
+  padding: 3.9rem 3.9rem 3.9rem 0;
 }
 .nav-icons a {
   font-size: 1.4rem;
@@ -65,12 +114,17 @@ a {
 .fa-bars {
   font-size: 1.9rem;
   color: var(--main-text-color);
-  padding: 3.5rem;
+  padding: 3.9rem;
 }
 
 /*HERO-SECTION*/
+.whitespace {
+  height: 13vh;
+  background: white;
+}
 .hero-image-container {
-  height: 95vh;
+  height: 90vh;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,14 +132,14 @@ a {
 }
 .hero-image {
   background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.52),
+      to top,
+      rgba(0, 0, 0, 0.836),
       rgba(255, 255, 255, 0)
     ),
     url(/img/bespoke-suit.jpg);
   background-size: cover;
   width: 85%;
-  height: 85%;
+  height: 80%;
   margin: auto;
   filter: saturate(40%);
 }
@@ -96,7 +150,27 @@ a {
   z-index: 1;
   padding-bottom: 3rem;
 }
-.hero-image-container h2::after {
+.hero-image-container i {
+  position: absolute;
+  color: white;
+  font-size: 2.2rem;
+  z-index: 1;
+  padding-top: 9rem;
+  padding-bottom: 3rem;
+  transition: ease-out;
+  animation: scrolldown 1s ease 2s infinite alternate;
+}
+@keyframes scrolldown {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+/*.hero-image-container h2::after {
   content: "";
   width: 60px;
   height: 2px;
@@ -106,4 +180,431 @@ a {
   transform: translate(-50%, -0%);
   background: white;
   position: absolute;
+}*/
+.hero-section {
+  position: relative;
+}
+.social-bar {
+  width: 2rem;
+  display: flex;
+  transform: rotate(-90deg);
+  z-index: 2;
+  position: absolute;
+  justify-content: center;
+  padding-top: 7.5rem;
+  left: 0px;
+}
+.social-links {
+  display: flex;
+  justify-content: space-between;
+}
+.social-links li {
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding-left: 3rem;
+  color: var(--main-text-color);
+  text-transform: uppercase;
+}
+.social-links a {
+  transition: color 0.25s ease-in-out;
+}
+.social-links li a:hover {
+  color: #a0a0a0;
+  transition: color 0.25s ease-in-out;
+}
+.social-links li:first-child {
+  padding-left: 0rem;
+} /*
+.slides {
+  display: flex;
+  transform: rotate(-90deg);
+  z-index: 6;
+  position: absolute;
+  justify-content: center;
+  padding-top: 6rem;
+  right: 0px;
+}
+.slide-lines {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slide {
+  width: 2rem;
+  height: 1rem;
+  background: red;
+
+  border: 2px solid black;
+}
+*/
+/*UNDER HERO*/
+.underhero {
+  width: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.747)
+    ),
+    url(/img/English-Cut-Men-About-Town-03-1-2000x1225.jpg);
+  filter: saturate(0%);
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+}
+.underhero-container {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+.underhero-container p {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.underhero-container h1 {
+  color: white;
+  font-size: 2.8rem;
+  padding-bottom: 2rem;
+}
+.underhero-content {
+  width: 100%;
+}
+
+/*ABOUT SECTION*/
+.about {
+  height: 85vh;
+  display: flex;
+}
+.about-bg {
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+      to right,
+      rgb(255, 255, 255),
+      rgba(255, 255, 255, 0)
+    ),
+    url("/img/English-Cut-Men-About-Town-01-1-2000x1225.jpg");
+  background-size: cover;
+  transform: scaleX(-1);
+  outline: none;
+  border: none;
+}
+.about-content {
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  padding: 16rem 9.7rem 0 0;
+  padding-bottom: 3rem;
+  width: 50%;
+}
+.about-content h2 {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  padding-bottom: 3.6rem;
+}
+.about-content p {
+  font-size: 2.4rem;
+  font-weight: 400;
+  padding-bottom: 7.2rem;
+}
+.about button {
+  transition: background 0.5s, color 0.5s ease-in-out;
+}
+.about button:hover {
+  background: var(--main-text-color);
+  color: white;
+  transition: background 0.5s, color 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+/*MTM SECTION*/
+.mtm {
+  height: 85vh;
+  display: flex;
+}
+.mtm-bg {
+  width: 100%;
+  height: 100%;
+  background: url("/img/english-cut-made-to-measure-code-2-1024x684.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+  outline: none;
+  border: none;
+}
+.mtm-content {
+  outline: none;
+  border: none;
+  position: absolute;
+  left: 0;
+  text-align: left;
+  padding: 16rem 0 0 9.7rem;
+  padding-bottom: 3rem;
+  width: 52%;
+}
+.mtm-content h2 {
+  font-size: 3.2rem;
+  padding-bottom: 3.6rem;
+  text-transform: uppercase;
+  color: white;
+}
+.mtm-content p {
+  font-size: 2.4rem;
+  font-weight: 400;
+  padding-bottom: 7.2rem;
+  color: white;
+}
+.mtm-content button {
+  color: white;
+  border: 2px solid white;
+}
+.mtm button {
+  transition: background 0.5s, color 0.5s ease-in-out;
+}
+.mtm button:hover {
+  background: white;
+  color: var(--main-text-color);
+  transition: background 0.5s, color 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+/*FEATURE SECTION*/
+.feature {
+  height: 85vh;
+  display: flex;
+  position: relative;
+}
+.feature-bg {
+  width: 100%;
+  height: 85vh;
+
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0)),
+    url("/img/English-Cut-Jim-Sturgess-01-1-2000x1225.jpg");
+  background-size: cover;
+  transform: scaleX(-1);
+  outline: none;
+  border: none;
+}
+.feature-content {
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  padding: 0 9.7rem 0 0;
+  padding-bottom: 2.5rem;
+  width: 50%;
+}
+.feature-content h2 {
+  font-size: 3.2rem;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+  position: relative;
+}
+.feature-content h3 {
+  padding-top: 16rem;
+  color: white;
+  padding-bottom: 2rem;
+}
+.feature button {
+  color: rgb(255, 255, 255);
+  border: 2px solid white;
+  transition: background 0.5s, color 0.5s ease-in-out;
+  margin-top: 14rem;
+}
+.feature button:hover {
+  background: white;
+  color: var(--main-text-color);
+  transition: background 0.5s, color 0.5s ease-in-out;
+  cursor: pointer;
+}
+.feature-content h2::before {
+  content: "";
+  width: 90px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/*GALLERY SECTION*/
+.insta-gallery {
+  height: 100vh;
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.gallery-container {
+  width: 85%;
+  height: 85%;
+  margin: auto;
+}
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.bg {
+  height: 25rem;
+  width: 35rem;
+}
+.bg1 {
+  background: url(/img/89402896_1361925964181229_489676135223981003_n.jpg);
+  background-size: cover;
+}
+.bg2 {
+  background: url(/img/84077504_110848927119939_8203321023206063485_n.jpg);
+  background-size: cover;
+}
+.bg3 {
+  background: url(/img/79036069_159565435326124_4997886238833478410_n.jpg);
+  background-size: cover;
+}
+.bg4 {
+  background: url(/img/72979097_172309574151970_5521300629065040017_n.jpg);
+  background-size: cover;
+}
+.bg5 {
+  background: url(/img/73420153_171580753906918_7878691335419414551_n.jpg);
+  background-size: cover;
+}
+.bg6 {
+  background: url(/img/74607435_171153960613546_9097321930635733404_n.jpg);
+  background-size: cover;
+}
+.insta-gallery h2 {
+  position: absolute;
+  left: -16rem;
+  top: 16rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  padding-top: 7.5rem;
+}
+.insta-gallery h2::after {
+  content: "";
+  width: 70px;
+  height: 2px;
+  background: var(--main-text-color);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.insta-gallery > h2 span a:hover {
+  transition: color 0.25s ease-in-out;
+  color: #a0a0a0;
+}
+.insta-gallery > h2 span a {
+  transition: color 0.25s ease-in-out;
+}
+
+/*CONTACT SECTION*/
+.contact-us {
+  display: flex;
+  height: 95vh;
+  z-index: -1;
+}
+.contact-content {
+  flex: 1.2 1 50px;
+  background: var(--main-text-color);
+}
+.contact-content h1 {
+  color: white;
+}
+.contact-content p {
+  font-size: 1.8rem;
+}
+.contact-image {
+  flex: 1 1 50px;
+  background: url(/img/area-image5.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  filter: saturate(0);
+}
+.contact-text {
+  padding: 15rem 0 0 10rem;
+}
+#email {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-weight: 700;
+
+  padding: 1rem 1rem 1rem 1rem;
+  width: 40rem;
+  outline: none;
+}
+.email {
+  padding-bottom: 5rem;
+}
+form {
+  display: inline-block;
+}
+#submit {
+  background: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid white;
+  padding: 1rem 3.7rem;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.25s, background 0.25s ease-in-out;
+}
+#submit:hover {
+  background: white;
+  color: var(--main-text-color);
+  transition: color 0.25s, background 0.25s ease-in-out;
+}
+.contact-heading {
+  padding-bottom: 5rem;
+  width: 85%;
+}
+.contact-heading p {
+  color: white;
+  font-size: 1.8rem;
+}
+.contact-heading h1 {
+  padding-bottom: 5rem;
+}
+#email::placeholder {
+  color: #a0a0a0;
+}
+
+/*FOOTER*/
+footer {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+}
+.footer-links {
+  display: flex;
+  width: 80%;
+  z-index: 6;
+  justify-content: space-evenly;
+}
+.footer-links li a {
+  font-weight: 800;
+  transition: color 0.25s ease-in-out;
+}
+.footer-links li a:hover {
+  color: #a0a0a0;
+  transition: color 0.25s ease-in-out;
 }
