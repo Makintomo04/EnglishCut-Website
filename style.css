@@ -45,6 +45,7 @@ button {
   bottom: 2rem;
   z-index: 6;
   display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   border: 1px solid white;
