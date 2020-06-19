@@ -275,7 +275,7 @@ button {
   display: flex;
 }
 .about-bg {
-  width: 95vw;
+  width: 100vw;
   height: 85vh;
   margin: auto;
   background: linear-gradient(
@@ -325,7 +325,7 @@ button {
   display: flex;
 }
 .mtm-bg {
-  width: 95vw;
+  width: 100vw;
   height: 85vh;
   margin: auto;
   background: url("/img/english-cut-made-to-measure-code-2-1024x684.jpg");
@@ -347,13 +347,13 @@ button {
   width: 52%;
 }
 .mtm-content h2 {
-  font-size: 3.2rem;
+  font-size: 4rem;
   padding-bottom: 3.6rem;
   text-transform: uppercase;
   color: white;
 }
 .mtm-content p {
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   font-weight: 400;
   padding-bottom: 7.2rem;
   color: white;
@@ -379,7 +379,7 @@ button {
   position: relative;
 }
 .feature-bg {
-  width: 95%;
+  width: 100vw;
   height: 85vh;
   margin: auto;
   background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0)),
@@ -400,7 +400,7 @@ button {
   width: 50%;
 }
 .feature-content h2 {
-  font-size: 3.2rem;
+  font-size: 5.6rem;
   color: white;
   text-transform: uppercase;
   padding-bottom: 2rem;
@@ -409,6 +409,8 @@ button {
 .feature-content h3 {
   padding-top: 16rem;
   color: white;
+  font-size: 2.4rem;
+  font-weight: 600;
   padding-bottom: 2rem;
 }
 .feature button {
@@ -541,19 +543,18 @@ button {
 /*CONTACT SECTION*/
 .contact-us {
   display: flex;
-  height: 95vh;
+  height: 85vh;
   z-index: -1;
 }
 .contact-content {
   flex: 1.2 1 40px;
   background: var(--main-text-color);
-  padding-left: 0.8rem;
 }
 .contact-content h1 {
   color: white;
 }
 .contact-content p {
-  font-size: 1.8rem;
+  font-size: 3.2rem;
 }
 .contact-image {
   flex: 1 1 40px;
@@ -564,16 +565,17 @@ button {
   filter: saturate(0);
 }
 .contact-text {
-  padding: 15rem 0 0 10rem;
+  margin: 15rem 10rem 0 10rem;
+  width: 60%;
 }
 #email {
   background: none;
   border: 2px solid white;
   color: white;
   font-weight: 700;
-
+  font-size: 2.8rem;
   padding: 1rem 1rem 1rem 1rem;
-  width: 40rem;
+  width: 150%;
   outline: none;
 }
 .email {
@@ -584,7 +586,8 @@ form {
 }
 #submit {
   background: none;
-  font-weight: 700;
+  font-size: 2.8rem;
+  font-weight: 600;
   text-transform: uppercase;
   border: 2px solid white;
   padding: 1rem 3.7rem;
@@ -604,10 +607,21 @@ form {
 }
 .contact-heading p {
   color: white;
-  font-size: 1.8rem;
+  font-size: 3.2rem;
 }
 .contact-heading h1 {
-  padding-bottom: 5rem;
+  padding-bottom: 4.5rem;
+  margin-bottom: 6rem;
+  font-size: 4rem;
+  position: relative;
+}
+.contact-heading h1::before {
+  content: "";
+  width: 80px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background: white;
 }
 #email::placeholder {
   color: #a0a0a0;
@@ -635,7 +649,157 @@ footer {
   color: #a0a0a0;
   transition: color 0.25s ease-in-out;
 }
+@media only screen and (max-width: 315px) {
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+  .logo h1 span {
+    font-size: 1.6rem;
+  }
+  .social-bar {
+    margin: auto;
+  }
+  .social-links {
+    margin: 0 auto;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .social-links li {
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  .social-links a {
+    margin: auto;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .hero-image,
+  .about-bg,
+  .mtm-bg,
+  .feature-bg {
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .nav-bar {
+    max-width: 100vw;
+  }
+  .hero-image-container h2 {
+    text-align: center;
+  }
+  .underhero-container h1 {
+    font-size: 1.8rem;
+  }
+  .underhero-container p {
+    font-size: 1.6rem;
+  }
+  #btt {
+    visibility: hidden;
+    display: none;
+  }
+  .about {
+    display: flex;
+    align-items: center;
+  }
+  .about-content {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    padding: 0;
+  }
+  .mtm {
+    display: flex;
+    align-items: center;
+  }
+  .feature-content {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    padding: 0;
+  }
+  .feature {
+    display: flex;
+    align-items: center;
+  }
+  .feature-content h3 {
+    padding-top: 0rem;
+  }
+  .mtm-content {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    right: 0;
+    padding: 0;
+  }
+  .contact-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .contact-text {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #email {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  #submit {
+    font-size: 2rem;
+  }
+  .contact-text h1 {
+    font-size: 3.2rem;
+  }
+  .contact-text p {
+    font-size: 1.8rem;
+  }
+  .contact-heading h1 {
+    padding-bottom: 2.25rem;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    position: relative;
+  }
+  .contact-heading h1::before {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .contact-image {
+    display: none;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .hero-image,
+  .about-bg,
+  .mtm-bg,
+  .feature-bg {
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .ab .hero-image-container h2 {
+    text-align: center;
+    padding: 2rem 2rem;
+  }
+  .social-bar li a {
+    color: white;
+  }
+  .social-bar li {
+    margin-bottom: 5rem;
+  }
+  .whitespace {
+    display: none;
+  }
+}
 @media only screen and (max-width: 786px) {
   .nav-icons li:first-child {
     display: none;
@@ -645,6 +809,26 @@ footer {
     width: 85%;
     color: white;
     font-size: 2.4rem;
+  }
+  .about-content p {
+    padding-bottom: 7.2rem;
+  }
+  .feature-content {
+    text-align: center;
+    width: 85%;
+    color: white;
+    font-size: 2.4rem;
+  }
+  .about button {
+    color: white;
+    border: 2px solid white;
+  }
+  #btt {
+    width: 50px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+  }
+  #btt i {
   }
   .about-bg {
     background: linear-gradient(
@@ -666,13 +850,14 @@ footer {
         rgba(255, 255, 255, 0)
       ),
       url("/img/english-cut-made-to-measure-code-2-1024x684.jpg");
+    background-size: cover;
   }
   .feature-content {
     text-align: center;
     width: 85%;
   }
-  .feature-content h3 {
-    font-size: 4rem;
+  .feature-content button {
+    margin-top: 7.2rem;
   }
   .feature-content h2 {
     font-size: 4rem;
@@ -713,7 +898,7 @@ footer {
     left: 50%;
     bottom: 0;
     transform: translate(-50%, -0%);
-    padding-bottom: 2rem;
+    margin-bottom: 2%;
     bottom: 0px;
   }
   .hero-section h2 {
@@ -722,5 +907,10 @@ footer {
   .whitespace {
     height: 10vh;
     background: white;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .social-bar {
+    padding-bottom: 2rem;
   }
 }
