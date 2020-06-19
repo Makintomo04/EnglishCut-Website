@@ -138,7 +138,7 @@ button {
       rgba(0, 0, 0, 0.836),
       rgba(255, 255, 255, 0)
     ),
-    url(/img/bespoke-suit.jpg);
+    url(./img/bespoke-suit.jpg);
   background-size: cover;
   width: 85%;
   height: 80%;
@@ -283,7 +283,7 @@ button {
       rgb(255, 255, 255),
       rgba(255, 255, 255, 0)
     ),
-    url("/img/English-Cut-Men-About-Town-01-1-2000x1225.jpg");
+    url("./img/English-Cut-Men-About-Town-01-1-2000x1225.jpg");
   background-size: cover;
   transform: scaleX(-1);
   outline: none;
@@ -328,7 +328,7 @@ button {
   width: 100vw;
   height: 85vh;
   margin: auto;
-  background: url("/img/english-cut-made-to-measure-code-2-1024x684.jpg");
+  background: url("./img/english-cut-made-to-measure-code-2-1024x684.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -383,7 +383,7 @@ button {
   height: 85vh;
   margin: auto;
   background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0)),
-    url("/img/English-Cut-Jim-Sturgess-01-1-2000x1225.jpg");
+    url("./img/English-Cut-Jim-Sturgess-01-1-2000x1225.jpg");
   background-size: cover;
   transform: scaleX(1);
   outline: none;
@@ -479,27 +479,27 @@ button {
   transition: filter 0.5s ease-in-out;
 }
 .bg1 {
-  background: url(/img/89402896_1361925964181229_489676135223981003_n.jpg);
+  background: url(./img/89402896_1361925964181229_489676135223981003_n.jpg);
   background-size: cover;
 }
 .bg2 {
-  background: url(/img/84077504_110848927119939_8203321023206063485_n.jpg);
+  background: url(./img/84077504_110848927119939_8203321023206063485_n.jpg);
   background-size: cover;
 }
 .bg3 {
-  background: url(/img/79036069_159565435326124_4997886238833478410_n.jpg);
+  background: url(./img/79036069_159565435326124_4997886238833478410_n.jpg);
   background-size: cover;
 }
 .bg4 {
-  background: url(/img/72979097_172309574151970_5521300629065040017_n.jpg);
+  background: url(./img/72979097_172309574151970_5521300629065040017_n.jpg);
   background-size: cover;
 }
 .bg5 {
-  background: url(/img/73420153_171580753906918_7878691335419414551_n.jpg);
+  background: url(./img/73420153_171580753906918_7878691335419414551_n.jpg);
   background-size: cover;
 }
 .bg6 {
-  background: url(/img/74607435_171153960613546_9097321930635733404_n.jpg);
+  background: url(./img/74607435_171153960613546_9097321930635733404_n.jpg);
   background-size: cover;
 }
 .text {
@@ -558,7 +558,7 @@ button {
 }
 .contact-image {
   flex: 1 1 40px;
-  background: url(/img/area-image5.jpg);
+  background: url(./img/area-image5.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
