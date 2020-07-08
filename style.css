@@ -758,13 +758,24 @@ footer {
   }
   #btt i {
   }
+  .about {
+    display: flex;
+    align-items: center;
+  }
+  .about-content {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    padding: 0;
+  }
   .about-bg {
     background: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.836),
         rgba(255, 255, 255, 0)
       ),
-      url("/img/English-Cut-Men-About-Town-01-1-2000x1225.jpg");
+      url("./img/English-Cut-Men-About-Town-01-1-2000x1225.jpg");
     background-size: cover;
   }
   .mtm-content {
@@ -777,7 +788,7 @@ footer {
         rgba(0, 0, 0, 0.836),
         rgba(255, 255, 255, 0)
       ),
-      url("/img/english-cut-made-to-measure-code-2-1024x684.jpg");
+      url("./img/english-cut-made-to-measure-code-2-1024x684.jpg");
     background-size: cover;
   }
   .feature-content {
@@ -897,27 +908,10 @@ footer {
     visibility: hidden;
     display: none;
   }
-  .about {
-    display: flex;
-    align-items: center;
-  }
-  .about-content {
-    position: absolute;
-    text-align: center;
-    margin: auto;
-    left: 0;
-    padding: 0;
-  }
+
   .mtm {
     display: flex;
     align-items: center;
-  }
-  .feature-content {
-    position: absolute;
-    text-align: center;
-    margin: auto;
-    left: 0;
-    padding: 0;
   }
   .feature {
     display: flex;
