@@ -898,11 +898,16 @@ footer {
   .hero-image-container h2 {
     text-align: center;
   }
+  .underhero {
+    background-color: rgb(255, 255, 255);
+  }
   .underhero-container h1 {
     font-size: 1.8rem;
+    color: var(--main-text-color);
   }
   .underhero-container p {
     font-size: 1.6rem;
+    color: var(--main-text-color);
   }
   #btt {
     visibility: hidden;
