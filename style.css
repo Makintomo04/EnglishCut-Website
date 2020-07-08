@@ -614,6 +614,7 @@ button {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  border-radius: 0;
 }
 .email {
   padding-bottom: 5rem;
@@ -635,6 +636,7 @@ form {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  border-radius: 0;
 }
 #submit:hover {
   background: white;
@@ -847,7 +849,7 @@ footer {
     color: white;
     height: fit-content;
     margin-bottom: 2%;
-    top: 84%;
+    top: 80%;
     width: auto;
     color: white;
   }
@@ -881,6 +883,9 @@ footer {
   .contact-heading p {
     font-size: 2.4rem;
   }
+  .footer {
+    margin-top: 10rem;
+  }
 }
 @media only screen and (max-width: 700px) {
   .hero-image,
@@ -897,6 +902,9 @@ footer {
   }
   .hero-image-container h2 {
     text-align: center;
+  }
+  .hero-section .social-bar {
+    top: 75%;
   }
   .underhero {
     background-color: rgb(255, 255, 255);
@@ -1020,9 +1028,18 @@ footer {
   .insta-gallery h2 {
     font-size: 1.8rem;
   }
+  .cards {
+    width: 100%;
+  }
+  .insta-gallery .container {
+    width: 100%;
+  }
+  .bg {
+    filter: saturate(1);
+  }
 }
 
-@media only screen and (max-width: 315px) {
+@media only screen and (max-width: 320px) {
   .logo h1 {
     font-size: 1.8rem;
   }
@@ -1034,7 +1051,7 @@ footer {
     top: 52.5%;
   }
   .social-links {
-    margin: 10rem auto;
+    margin: 2rem auto;
 
     display: flex;
     flex-direction: column;
@@ -1048,5 +1065,19 @@ footer {
   .social-links a {
     margin: auto;
     text-align: center;
+  }
+  .about .container,
+  .mtm .container,
+  .feature .container {
+    width: 100%;
+  }
+  .mtm p {
+    padding-bottom: 6.8rem;
+  }
+  .contact-heading h1 {
+    margin-top: 5rem;
+  }
+  .footer {
+    margin-top: 5rem;
   }
 }
