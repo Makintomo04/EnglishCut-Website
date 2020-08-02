@@ -13,10 +13,14 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  width: 100%;
 }
 body {
   font-family: "Sanchez", serif;
+}
+html,
+body {
+  overflow-x: hidden;
 }
 /*GLOBAL STYLES*/
 ul {
@@ -132,6 +136,7 @@ button {
   font-size: 1.9rem;
   color: var(--main-text-color);
   padding: 3.9rem;
+  cursor: pointer;
 }
 
 /*HERO-SECTION*/
@@ -148,6 +153,7 @@ button {
   justify-content: center;
   align-items: center;
   position: relative;
+  max-width: 1920px;
 }
 .hero-section .container {
   height: 100%;
@@ -165,6 +171,7 @@ button {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  font-family: "Sanchez", serif;
 }
 .socials p {
   flex: 1;
@@ -182,6 +189,20 @@ button {
   justify-content: flex-end;
   display: flex;
 }
+/* .welcome {
+  position: absolute;
+  right: 0;
+
+  top: 70px;
+}
+.welcome h2 {
+  font-family: "Sanchez", serif;
+  font-size: 150px;
+  color: transparent;
+  -webkit-text-stroke: 0.005px black;
+  text-align: right;
+  line-height: 0.8;
+} */
 .hero-image {
   background-image: url(./img/hero-1.jpg);
   background-size: cover;
@@ -614,7 +635,6 @@ button:hover {
   bottom: 0;
   text-align: right;
   height: auto;
-  max-width: 50%;
 }
 .feature-content h2 {
   font-size: 6.4rem;
@@ -934,6 +954,8 @@ button:hover {
   border-radius: 0;
 }
 .email {
+  max-width: 1000px;
+  width: -webkit-fill-available;
   padding-bottom: 5rem;
 }
 form {
@@ -995,7 +1017,7 @@ form {
 /*FOOTER*/
 footer {
   position: absolute;
-  width: 60%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1009,6 +1031,9 @@ footer {
   z-index: 6;
   justify-content: space-evenly;
 }
+.footer-links li {
+  margin-left: 2rem;
+}
 .footer-links li a {
   font-weight: 800;
   transition: color 0.25s ease-in-out;
@@ -1019,21 +1044,77 @@ footer {
   transition: color 0.25s ease-in-out;
 }
 
-/* @media only screen and (max-width: 1080px) {
+/* /* @media only screen and (max-width: 1080px) {
   .social-bar {
     padding-bottom: 2rem;
   }
-}
-@media only screen and (max-width: 1040px) {
-  .contact-image {
-    display: none;
+} */
+
+@media only screen and (max-width: 1440px) {
+  .about-image {
+    bottom: -70rem;
+    height: 60rem;
+    width: 40rem;
+  }
+  .mtm-content {
+    bottom: -20rem;
+    padding-right: 0;
+  }
+  .mtm-image {
+    height: 40rem;
+    width: 60rem;
+    bottom: -50rem;
+    right: -30rem;
+  }
+  .feature-image {
+    bottom: -70%;
+  }
+  .feature-content {
+    bottom: -85rem;
+  }
+  .locations-content {
+    padding-right: 0;
+    bottom: -35%;
+  }
+  .locations-image {
+    padding-right: 0;
+    bottom: -110%;
+    width: 60rem;
+    right: 0;
+  }
+  .arrow {
+    left: 0;
+    bottom: -110%;
+  }
+  .insta-gallery h2 {
+    top: 100rem;
+  }
+  .arrow-2 {
+    left: 45%;
+
+    top: 55%;
+  }
+  .slider {
+    margin-top: 120rem;
   }
   #email {
     width: 100%;
   }
+  .contact-text {
+    margin: 15rem 0 0 0;
 }
-
-@media only screen and (max-width: 974px) {
+@media only screen and (max-width: 768px) {
+  .about-content,
+  .mtm-content,
+  .feature-content,
+  .locations-content {
+    width: 100%;
+  }
+  .mtm-image {
+    bottom: -70rem;
+  }
+}
+/* @media only screen and (max-width: 974px) {
   .bg {
     width: 45rem;
   }
