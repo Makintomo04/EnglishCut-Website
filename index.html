@@ -6,13 +6,17 @@
     <title>English Cut</title>
     <link rel="stylesheet" href="style.css" />
     <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script
       src="https://kit.fontawesome.com/60e9087336.js"
       crossorigin="anonymous"
     ></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="btt">
+    <div onclick="btt" id="btt">
       <i class="fas fa-chevron-down"></i>
     </div>
     <div class="fixed-nav">
@@ -104,65 +108,68 @@
     <section class="about">
       <!-- <div class="about-bg"></div> -->
       <div class="container">
-        <div class="underhero-container">
-          <div class="underhero-content">
-            <h2
-              data-aos="fade-right"
-              data-aos-offset="100"
-              data-aos-easing="ease-out-cubic"
-            >
-              BRITISH BESPOKE TAILORING
-            </h2>
-            <p
-              data-aos="fade-right"
-              data-aos-offset="100"
-              data-aos-easing="ease-out-cubic"
-            >
-              We’re well-known for taking a straightforward, no-nonsense
-              approach to tailoring. We feel the formula for a good suit is
-              pretty simple. It’s about a slim-cut silhouette and a soft
-              comfortable make – a suit should be a pleasure to wear. If you’re
-              new to quality tailoring, you may not be familiar with these
-              terms. However, fine tailoring is an art and expression.
-            </p>
+        <div class="about-col">
+          <div class="underhero-container">
+            <div class="underhero-content">
+              <h2
+                data-aos="fade-right"
+                data-aos-offset="100"
+                data-aos-easing="ease-out-cubic"
+              >
+                BRITISH BESPOKE TAILORING
+              </h2>
+              <p
+                data-aos="fade-right"
+                data-aos-offset="100"
+                data-aos-easing="ease-out-cubic"
+              >
+                We’re well-known for taking a straightforward, no-nonsense
+                approach to tailoring. We feel the formula for a good suit is
+                pretty simple. It’s about a slim-cut silhouette and a soft
+                comfortable make – a suit should be a pleasure to wear. If
+                you’re new to quality tailoring, you may not be familiar with
+                these terms. However, fine tailoring is an art and expression.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="about-content">
-          <h2
-            data-aos="fade-left"
-            data-aos-offset="200"
-            data-aos-easing="ease-out-cubic"
-          >
-            About Us
-          </h2>
-          <p
-            data-aos="fade-left"
-            data-aos-offset="225"
-            data-aos-easing="ease-out-cubic"
-          >
-            Our team of cutters, tailors and makers have been honing their
-            skills on London’s famous Savile Row for the last 35 years.
-          </p>
-          <button
-            data-aos="fade-left"
-            data-aos-offset="0"
-            data-aos-easing="ease-out-cubic"
-          >
-            Find Out More
-          </button>
-        </div>
-        <div
-          class="about-image"
-          data-aos="fade-right"
-          data-aos-offset="500"
-          data-aos-easing="ease-out-cubic"
-        >
-          <img
-            class="rotating-text"
-            src="./img/text-on-path.png"
-            height="264"
-            alt=""
-          />
+          <div class="about-content">
+            <div
+              class="about-image"
+              data-aos="fade-right"
+              data-aos-easing="ease-out-cubic"
+            >
+              <img
+                class="rotating-text"
+                src="./img/text-on-path.png"
+                height="264"
+                alt=""
+              />
+            </div>
+            <div class="about-text">
+              <h2
+                data-aos="fade-left"
+                data-aos-offset="200"
+                data-aos-easing="ease-out-cubic"
+              >
+                About Us
+              </h2>
+              <p
+                data-aos="fade-left"
+                data-aos-offset="225"
+                data-aos-easing="ease-out-cubic"
+              >
+                Our team of cutters, tailors and makers have been honing their
+                skills on London’s famous Savile Row for the last 35 years.
+              </p>
+              <button
+                data-aos="fade-left"
+                data-aos-offset="0"
+                data-aos-easing="ease-out-cubic"
+              >
+                Find Out More
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="background"></div>
@@ -171,39 +178,50 @@
       <!-- <div class="mtm-bg"></div> -->
       <div class="container">
         <div class="mtm-content">
-          <h2 data-aos="fade-right" data-aos-offset="200">MTM Code</h2>
-          <p data-aos="fade-right" data-aos-offset="225">
-            Our Made to Measure Code service allows everyone the opportunity to
-            experience suiting made to the exacting standards we’re known for.
-          </p>
-          <button data-aos="fade-right" data-aos-offset="0">
-            Find Out More
-          </button>
+          <div class="mtm-text">
+            <h2 data-aos="fade-right" data-aos-offset="200">MTM Code</h2>
+            <p data-aos="fade-right" data-aos-offset="225">
+              Our Made to Measure Code service allows everyone the opportunity
+              to experience suiting made to the exacting standards we’re known
+              for.
+            </p>
+
+            <button data-aos="fade-right" data-aos-offset="0">
+              Find Out More
+            </button>
+          </div>
+          <div
+            class="mtm-image"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-anchor-placement="center-bottom"
+          ></div>
         </div>
-        <div
-          class="mtm-image"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-anchor-placement="center-bottom"
-        ></div>
       </div>
       <!-- <div class="background"></div> -->
     </section>
     <section class="feature">
       <div class="container">
-        <div class="feature-image" data-aos="fade-up" data-aos-offset="500">
-          <h3 data-aos="fade-down">THE CORK</h3>
-        </div>
-        <div class="arrow" data-aos="fade-right"></div>
         <div
           class="feature-content"
           data-aos="fade-left"
           data-aos-anchor=".feature"
           data-aos-offset="800"
         >
-          <h2>JIM STURGESS</h2>
-          <span></span>
-          <button>Read Feature</button>
+          <div class="feature-image" data-aos="fade-up">
+            <h3 data-aos="fade-down">THE CORK</h3>
+          </div>
+
+          <div class="feature-text">
+            <div class="arrow-container">
+              <div class="arrow" data-aos="fade-right"></div>
+            </div>
+            <div class="main-feature-text">
+              <h2 data-aos="fade-left">JIM STURGESS</h2>
+              <span></span>
+              <button data-aos="fade-left">Read Feature</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -211,49 +229,54 @@
       <!-- <div class="mtm-bg"></div> -->
       <div class="container">
         <div class="locations-content">
-          <h2 data-aos="fade-right" data-aos-offset="200">Locations</h2>
-          <p data-aos="fade-right" data-aos-offset="225">
-            All of our locations offer the full range of our Made to Measure
-            Code services. Our Bespoke service can be arranged by appointment
-            through our Bespoke workshop.
-          </p>
-          <button data-aos="fade-right" data-aos-offset="0">
-            Find Out More
-          </button>
+          <div class="locations-text">
+            <h2 data-aos="fade-right" data-aos-offset="200">Locations</h2>
+            <p data-aos="fade-right" data-aos-offset="225">
+              All of our locations offer the full range of our Made to Measure
+              Code services. Our Bespoke service can be arranged by appointment
+              through our Bespoke workshop.
+            </p>
+            <button data-aos="fade-right" data-aos-offset="0">
+              Find Out More
+            </button>
+          </div>
+          <div
+            class="locations-image"
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-anchor-placement="center-bottom"
+          ></div>
         </div>
-        <div
-          class="locations-image"
-          data-aos="fade-left"
-          data-aos-offset="200"
-          data-aos-anchor-placement="center-bottom"
-        ></div>
       </div>
       <!-- <div class="background"></div> -->
     </section>
     <section class="insta-gallery">
-      <h2
-        data-aos="fade-down"
-        data-aos-offset="300"
-        data-aos-anchor-placement="top"
-      >
-        ENGLISH CUT ON
-        <span
-          ><a
-            href="https://www.instagram.com/englishcut/?hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
+      <div class="insta-content">
+        <div class="insta-intro">
+          <h2
+            data-aos="fade-down"
+            data-aos-offset="300"
+            data-aos-anchor-placement="top"
           >
-            INSTAGRAM</a
-          ></span
-        >
-      </h2>
-      <div
-        data-aos="fade-down"
-        data-aos-offset="300"
-        class="arrow arrow-2"
-      ></div>
-      <div class="container">
-        <!-- <div class="cards">
+            ENGLISH CUT ON
+            <span
+              ><a
+                href="https://www.instagram.com/englishcut/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                INSTAGRAM</a
+              ></span
+            >
+          </h2>
+          <div
+            data-aos="fade-down"
+            data-aos-offset="300"
+            class="arrow arrow-2"
+          ></div>
+        </div>
+        <div class="container">
+          <!-- <div class="cards">
           <div class="bg bg1"></div>
           <div class="bg bg2"></div>
           <div class="bg bg3"></div>
@@ -261,32 +284,27 @@
           <div class="bg bg5"></div>
           <div class="bg bg6"></div>
         </div> -->
-        <div class="slider">
-          <div class="slide">
+          <div class="slider">
+            <div class="slide">
+              <img class="slider-img" src="./img/insta-1.jpg" alt="" />
+            </div>
+            <div class="slide-nav">
+              <div class="slide-left" onclick="prev()">
+                <img src="./img/arrow-shape.png" alt="" />
+              </div>
+              <div class="slide-right" onclick="next()">
+                <img src="./img/Arrow-shape-white.png" alt="" />
+              </div>
+            </div>
             <img
-              class="slider-img"
-              data-aos="flip-right"
-              data-aos-offset="300"
-              src="./img/insta-1.jpg"
+              class="insta-text"
+              data-aos="fade-left"
+              data-aos-offset="500"
+              src="./img/text-on-path-insta.png"
+              height="264"
               alt=""
             />
           </div>
-          <div class="slide-nav">
-            <div class="slide-left" onclick="prev()">
-              <img src="./img/arrow-shape.png" alt="" />
-            </div>
-            <div class="slide-right" onclick="next()">
-              <img src="./img/Arrow-shape-white.png" alt="" />
-            </div>
-          </div>
-          <img
-            class="insta-text"
-            data-aos="fade-left"
-            data-aos-offset="500"
-            src="./img/text-on-path-insta.png"
-            height="264"
-            alt=""
-          />
         </div>
       </div>
     </section>

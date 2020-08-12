@@ -12,7 +12,8 @@ function scrollFunction() {
   }
 }
 backToTop.addEventListener("click", () => {
-  document.documentElement.scrollTop = 0;
+  // document.documentElement.scrollTop = 0;
+  window.scroll({ top: 0, left: 0, behavior: "smooth" });
 });
 
 backToTop.addEventListener("mouseover", () => {
@@ -23,7 +24,7 @@ backToTop.addEventListener("mouseout", () => {
 });
 
 const sliderImg = document.querySelector(".slider-img");
-const images = ["insta-1.jpg", "insta-2.jpg", "insta-3.jpg", "insta-4.jpg"];
+const images = ["insta-1.jpg", "insta-2.jpg", "insta-4.jpg"];
 let i = 0;
 
 function prev() {
